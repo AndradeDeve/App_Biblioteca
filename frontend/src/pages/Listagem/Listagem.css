@@ -1,0 +1,228 @@
+/* ======= RESET BÁSICO ======= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle at top, #0a1b3d 0%, #020916 100%);
+  font-family: "Poppins", "Inter", Arial, sans-serif;
+  color: #e4e9f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+/* ======= CONTAINER PRINCIPAL ======= */
+.listagem-container {
+  width: 90vw;
+  background: rgba(12, 24, 54, 0.9);
+  border: 1px solid rgba(25, 182, 210, 0.3);
+  border-radius: 14px;
+  box-shadow: 0 0 30px rgba(25, 182, 210, 0.1);
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* ======= TÍTULO ======= */
+.listagem-container h2 {
+  text-align: center;
+  color: #19b6d2;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(25, 182, 210, 0.4);
+}
+
+/* ======= CAMPO DE BUSCA ======= */
+.filtro-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.filtro-container input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 16px;
+  background: #0d1a3a;
+  border: 1px solid rgba(25, 182, 210, 0.3);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #eaf7fa;
+  transition: all 0.25s ease;
+}
+
+.filtro-container input::placeholder {
+  color: #8fa6c2;
+}
+
+.filtro-container input:focus {
+  border-color: #19b6d2;
+  box-shadow: 0 0 10px rgba(25, 182, 210, 0.3);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* ======= TABELA ======= */
+.tabela-acessos {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tabela-acessos thead {
+  background: linear-gradient(90deg, #19b6d2 0%, #1976d2 100%);
+}
+
+.tabela-acessos th {
+  padding: 14px 16px;
+  text-align: left;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.tabela-acessos tbody tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
+}
+
+.tabela-acessos td {
+  padding: 12px 16px;
+  color: #cfd8e3;
+  font-size: 0.95rem;
+}
+
+.tabela-acessos tbody tr:hover {
+  background: rgba(25, 182, 210, 0.1);
+  transform: scale(1.01);
+}
+
+/* ======= SEM RESULTADOS ======= */
+.sem-resultados {
+  text-align: center;
+  padding: 25px;
+  color: #8699b8;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+/* ======= PAGINAÇÃO ======= */
+.paginacao-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.paginacao-container button {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(25, 182, 210, 0.4);
+  color: white;
+  cursor: pointer;
+}
+
+.paginacao-container button:disabled {
+  background-color: rgba(25, 182, 210, 0.2);
+  cursor: not-allowed;
+}
+
+.paginacao-container span {
+  color: #fff;
+  font-weight: bold;
+}
+
+/* ======= RESPONSIVIDADE ======= */
+@media (max-width: 80vw) {
+  .listagem-container {
+    padding: 25px 15px;
+  }
+
+  .tabela-acessos {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .filtro-container input {
+    width: 90%;
+  }
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+.botao-teste {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.botao-teste:hover {
+  background-color: #ff5252;
+}
+
+.sem-resultados {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-style: italic;
+}
+
+.paginacao-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.paginacao-container button:not(.botao-teste) {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: rgb(16, 187, 218);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.paginacao-container button:not(.botao-teste):hover:not(:disabled) {
+  background: #38f2ff;
+}
+
+.paginacao-container button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ======= ANIMAÇÃO DE ENTRADA ======= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

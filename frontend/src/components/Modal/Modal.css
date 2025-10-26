@@ -1,0 +1,50 @@
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.modal {
+  background: #1f2a37;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 15px rgba(25, 182, 210, 0.3);
+  color: #cfd8e3;
+}
+
+.modal input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #19b6d2;
+  background: #111827;
+  color: #fff;
+}
+
+.modal .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+.modal button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  background: #19b6d2;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.modal button:hover {
+  background: #0e8fa6;
+}

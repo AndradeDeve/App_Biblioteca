@@ -1,0 +1,73 @@
+/* ======= CONTAINER ======= */
+.cadastro-container {
+  width: 90vw;
+  max-width: 500px;
+  background: rgba(12, 24, 54, 0.9);
+  border: 1px solid rgba(25, 182, 210, 0.3);
+  border-radius: 14px;
+  padding: 40px 30px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(25, 182, 210, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+  margin: 50px auto; /* 40px de top/bottom, auto nas laterais */
+}
+
+/* ======= TÍTULO ======= */
+.cadastro-container h2 {
+  text-align: center;
+  color: #19b6d2;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(25, 182, 210, 0.4);
+}
+
+/* ======= FORMULÁRIO ======= */
+.cadastro-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cadastro-container input,
+.cadastro-container select {
+  padding: 12px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(25, 182, 210, 0.3);
+  background: #0d1a3a;
+  color: #eaf7fa;
+  transition: all 0.25s ease;
+}
+
+.cadastro-container input:focus,
+.cadastro-container select:focus {
+  border-color: #19b6d2;
+  box-shadow: 0 0 10px rgba(25, 182, 210, 0.3);
+  outline: none;
+  transform: scale(1.02);
+}
+
+/* ======= BOTÃO ======= */
+.cadastro-container button {
+  padding: 12px 16px;
+  background: #19b6d2;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.cadastro-container button:hover {
+  background: #1976d2;
+  transform: scale(1.02);
+}
+
+/* ======= ANIMAÇÃO ======= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
